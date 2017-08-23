@@ -5,20 +5,20 @@ var PCA = {
     //当前选中值
     _p:null,_c:null,_a:null,
     p : function(){
-        var _html = '<option name="">请选择省</option>';
-        $.each(PCA.ps,function(k,v){_html += '<option name="'+ v +'">'+ v +'</option>';});
+        var _html = '<option value="">请选择省</option>';
+        $.each(PCA.ps,function(k,v){_html += '<option value="'+ v +'">'+ v +'</option>';});
         PCA._pt.html(_html);
     },
     c : function(){
-        var _html = '<option name="">请选择市</option>';
+        var _html = '<option value="">请选择市</option>';
         if(PCA._p && PCA.cs[PCA._p]) {
-            $.each(PCA.cs[PCA._p],function(k,v){_html += '<option name="'+ v +'">'+ v +'</option>';});
+            $.each(PCA.cs[PCA._p],function(k,v){_html += '<option value="'+ v +'">'+ v +'</option>';});
         }
         PCA._ct.html(_html);
     },
     a : function(){
-        var _html = '<option name="">请选择区</option>';
-        if(PCA._p && PCA._c){var _k = PCA._p.substring(0,2) + PCA._c;if(PCA.ass[_k]) {$.each(PCA.ass[_k],function(k,v){_html += '<option name="'+ v +'">'+ v +'</option>';});}}
+        var _html = '<option value="">请选择区</option>';
+        if(PCA._p && PCA._c){var _k = PCA._p.substring(0,2) + PCA._c;if(PCA.ass[_k]) {$.each(PCA.ass[_k],function(k,v){_html += '<option value="'+ v +'">'+ v +'</option>';});}}
         PCA._at.html(_html);
     },
     init:function(pp,cc,aa) {
