@@ -1,10 +1,6 @@
 ##pca
-<!DOCTYPE html>
-<html>
-<head>
-    <title>城市三级联动</title>
-</head>
-<body>
+
+```
 <select id="province"></select>
 <select id="city"></select>
 <select id="area"></select>
@@ -13,11 +9,12 @@
 <script type="text/javascript">
 PCA.init($("#province"),$("#city"),$("#area"));
 </script>
-</body>
-</html>
+```
 
 
 ##layui-pca
+
+```
 <div class="layui-form-item">
     <div class="layui-row layui-col-space10">
         <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
@@ -46,3 +43,4 @@ layui.use(['jquery','form','pca'], function() {
     var pca = layui.pca;
 });
 </script>
+```
